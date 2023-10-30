@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is your global CSS Stylesheet */
+/* Change on your own risk */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 520;
+  }
+
+  /* Navbar --> Navbar.jsx */
+  .header-menu > ul > li {
+    border-bottom: 1px solid transparent;
+  }
+
+  .header-menu > ul > li:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    width: fit-content;
+  }
+  .main-nav-menu-mobile {
+    background: rgba(83, 83, 83, 0.267);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+  }
+
+  /* General CSS for all glowing-background with border class */
+  .glowing-background {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+    border-radius: 20px;
+  }
+
+  .glowing-background::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  /* Hero --> HeroSection.jsx */
+  .outer-container {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .outer-container::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(
+      89.8deg,
+      rgba(255, 255, 255, 0) 7.11%,
+      rgba(255, 255, 255, 0.185) 117.23%
+    );
+    opacity: 0.4;
+    border: 0.5px solid #f2f2f25b;
+    backdrop-filter: blur(40px);
+    border-radius: 30px;
+  }
+
+  .inner-container {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+    border-radius: 20px;
+    z-index: 2;
+  }
+
+  .inner-container::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    border-radius: 20px;
+    z-index: -1;
+  }
+  /* For the ++++ texture background */
+  .inner-container::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(/src/assets/texture.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  /* Hero --> HeroSection.jsx all featured-logo background */
+  .featured-company-logo {
+    position: relative;
+    isolation: isolate;
+  }
+  .featured-company-logo::before {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #313131;
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  /* Features-1 --> StrategySection.jsx features */
+  .feature-icon-circle {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+    border-radius: 100%;
+  }
+
+  .feature-icon-circle::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  /* Features-2 --> InformationSection.jsx information section */
+  .information-section-background {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .information-section-background::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 120px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    opacity: 0.5;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  /* Integrate app-image-icon container normal is light one and '-dark' is darker one */
+  .integrate-container {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+    border-radius: 20px;
+  }
+
+  .integrate-container::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(106.02deg, #484848 -9.04%, #101010 124.2%);
+    opacity: 0.3;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .integrate-container-dark {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+    border-radius: 20px;
+  }
+
+  .integrate-container-dark::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 20px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    .integrate-container::before {
+      border-radius: 5px;
+    }
+    .integrate-container-dark::before {
+      border-radius: 5px;
+    }
+    .integrate-container {
+      border-radius: 5px;
+    }
+    .integrate-container-dark {
+      border-radius: 5px;
+    }
+  }
+
+  /* Pricing --> PricingSection.jsx pricing section */
+  .pricing-container-dark {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+
+    border-radius: 20px;
+  }
+
+  .pricing-container-dark::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 20px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  /* Pricing-section-CSS-styling */
+  .pricing-container-dark:hover {
+    cursor: pointer;
+    box-shadow: 3px 2px 3px 1px rgba(185, 255, 127, 0.329);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .pricing-card-button:hover {
+    background-color: rgba(134, 180, 88, 0.1);
+    color: white;
+    border: 1px solid rgb(142, 255, 36);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Footer --> Footer.jsx footer section */
+  .truncate-nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .footer-link-item:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .footer-social-container-dark {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+      166.41deg,
+      #3e3e3e 0.74%,
+      rgba(62, 62, 62, 0) 90.27%
+    );
+
+    border-radius: 20px;
+  }
+
+  .footer-social-container-dark::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 20px;
+    background: linear-gradient(157.25deg, #252525 3.62%, #101010 88.02%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  /* Footer-section-CSS-styling */
+  .footer-social-container-dark:hover {
+    cursor: pointer;
+    box-shadow: 3px 2px 3px 1px rgba(185, 255, 127, 0.329);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .footer-social-container-dark-button:hover {
+    background-color: rgba(134, 180, 88, 0.1);
+    color: white;
+    border: 1px solid rgb(142, 255, 36);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
